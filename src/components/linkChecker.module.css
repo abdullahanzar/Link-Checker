@@ -1,0 +1,117 @@
+.mainbody {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.urlTextBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 18%;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.urlTextBox input {
+  margin-left: 1rem;
+  padding: 0.25rem 0.5rem;
+  width: 30%;
+  height: 30%;
+  border-radius: 8px;
+  margin: 0.2rem;
+  font-size: 1.2rem;
+  font-family: "Ubuntu", "DM Sans";
+}
+
+@media only screen and (max-width: 767px) {
+    .urlTextBox input {
+        width: 90%;
+    }
+  }
+
+.urlTextBox button {
+  border: none;
+  background: #747d96;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  color: #fff;
+  font-family: "Ubuntu", "DM Sans";
+  border-radius: 8px;
+}
+
+.urlTextBox button:hover {
+  border: none;
+  background: rgba(96, 113, 43, 0.5);
+  color: #fff;
+  cursor: pointer;
+}
+
+.results {
+  width: 100%;
+  overflow: auto;
+  max-height: 82%;
+}
+
+.results ul {
+  list-style-type: none;
+}
+
+.results a {
+  padding: 0.5rem;
+  color: #fff;
+}
+
+.results p {
+  padding: 0.5rem;
+  color: rgb(221, 35, 227);
+}
+
+.results>p:first-of-type {
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.loader {
+  color: #fff;
+  font-family: Consolas, Menlo, Monaco, monospace;
+  font-weight: bold;
+  font-size: 78px;
+  opacity: 0.8;
+}
+.loader:before {
+  content: "{";
+  display: inline-block;
+  animation: pulse 0.4s alternate infinite ease-in-out;
+}
+.loader:after {
+  content: "}";
+  display: inline-block;
+  animation: pulse 0.4s 0.3s alternate infinite ease-in-out;
+}
+
+@keyframes pulse {
+  to {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+
+.error {
+  font-size: 1.1rem;
+  color: red;
+  margin-top: 0.5rem;
+}
+
+.ok {
+  color: green;
+}
+
+.broken {
+  color: red;
+}
