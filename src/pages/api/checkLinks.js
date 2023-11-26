@@ -16,7 +16,7 @@ export default async function handler(req, res) {
       while ((match = regex.exec(html)) !== null) {
         links.push(match[1]);
       }
-      console.log(links);
+      //console.log(links);
       const linkCheckPromises = links.map(async (link) => {
         try {
           await axios.head(link);
