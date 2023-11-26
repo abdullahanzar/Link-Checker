@@ -20,7 +20,7 @@ export default function LinkChecker() {
       const response = await axios.get(
         `/api/checkLinks?url=${encodeURIComponent(url)}`
       );
-      console.log(response);
+      //console.log(response);
       setResult(response.data);
       setLoading(false);
     } catch (e) {
@@ -64,7 +64,7 @@ export default function LinkChecker() {
             {result &&
               result.map((obj, key) => (
                 <li key={key}>
-                  <a href={obj.link}>{obj.link}</a>
+                  <a href={obj.link} target="_blank">{obj.link}</a>
                   <p>
                     Status:{" "}
                     <span
